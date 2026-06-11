@@ -514,7 +514,7 @@
   <div class="wrap">
     <div class="brand">Chelsea <span style="color:var(--brass-soft); font-style:italic;">Corners</span></div>
     <div class="fleur">❦</div>
-    <p>756 S. Carondelet St, Los Angeles, CA 90057 &nbsp;·&nbsp; <span id="footPhone">(555) 555-1234</span></p>
+    <p>756 S. Carondelet St, Los Angeles, CA 90057 &nbsp;·&nbsp; <a id="footPhone" href="#" style="color:inherit;">(555) 555-1234</a></p>
     <p style="margin-top:14px; color:#6e6757;">© 2026 Chelsea Corners Apartments. Equal Housing Opportunity.</p>
   </div>
 </footer>
@@ -570,7 +570,9 @@ const tel = "tel:+1" + CONFIG.phone.replace(/\D/g,"");
 document.getElementById("phoneLink").href = tel;
 document.getElementById("phoneLink").textContent = CONFIG.phone;
 document.getElementById("stickyCall").href = tel;
-document.getElementById("footPhone").textContent = CONFIG.phone;
+const footPhone = document.getElementById("footPhone");
+footPhone.textContent = CONFIG.phone;
+footPhone.href = tel;
 const emailLink = document.getElementById("emailLink");
 emailLink.href = "mailto:" + CONFIG.email;
 emailLink.textContent = CONFIG.email;
