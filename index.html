@@ -467,31 +467,31 @@
         <div class="form-row">
           <div>
             <label for="name">Full Name</label>
-            <input id="name" type="text" required>
+            <input id="name" name="name" type="text" required>
           </div>
           <div>
             <label for="phone">Phone</label>
-            <input id="phone" type="tel">
+            <input id="phone" name="phone" type="tel">
           </div>
         </div>
         <div class="form-row">
           <div>
             <label for="email">Email</label>
-            <input id="email" type="email" required>
+            <input id="email" name="email" type="email" required>
           </div>
           <div>
             <label for="unit">Unit of Interest</label>
-            <select id="unit"><option value="Any">Any available unit</option></select>
+            <select id="unit" name="unit"><option value="Any">Any available unit</option></select>
           </div>
         </div>
         <div class="form-row">
           <div>
             <label for="movein">Desired Move-In</label>
-            <input id="movein" type="date">
+            <input id="movein" name="movein" type="date">
           </div>
           <div>
             <label for="tourtype">Tour Preference</label>
-            <select id="tourtype">
+            <select id="tourtype" name="tourtype">
               <option>In-person tour</option>
               <option>Video tour</option>
               <option>Just have questions</option>
@@ -500,10 +500,10 @@
         </div>
         <div>
           <label for="msg">Message <span style="text-transform:none; letter-spacing:0;">(optional)</span></label>
-          <textarea id="msg" placeholder="Mornings work best for me…"></textarea>
+          <textarea id="msg" name="message" placeholder="Mornings work best for me…"></textarea>
         </div>
         <button class="btn btn-dark" type="submit">Request My Tour</button>
-        <p class="form-note" id="formNote">This opens a pre-written email in your mail app — just press send.</p>
+        <p class="form-note" id="formNote">We'll confirm your tour within one business day.</p>
       </form>
     </div>
   </div>
@@ -688,28 +688,34 @@ addEventListener("keydown", e => {
   if (e.key === "ArrowRight") lb.querySelector(".lb-next").click();
 });
 
-/* ── Tour form → pre-written email ── */
-document.getElementById("tourForm").addEventListener("submit", e => {
+/* ── Tour form → Formspree ── */
+document.getElementById("tourForm").addEventListener("submit", async e => {
   e.preventDefault();
-  const v = id => document.getElementById(id).value;
-  const subject = `Tour Request — ${v("unit")} at Chelsea Corners`;
-  const body =
-`Hello,
-
-I'd like to schedule a tour at Chelsea Corners Apartments (756 S. Carondelet St).
-
-Name: ${v("name")}
-Phone: ${v("phone") || "—"}
-Email: ${v("email")}
-Unit of interest: ${v("unit")}
-Desired move-in: ${v("movein") || "Flexible"}
-Tour preference: ${v("tourtype")}
-
-${v("msg")}
-
-Thank you!`;
-  location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  document.getElementById("formNote").textContent = "Your email draft is ready — press send in your mail app and we'll be in touch within one business day.";
+  const form = e.target;
+  const note = document.getElementById("formNote");
+  const btn = form.querySelector("button[type=submit]");
+  btn.disabled = true;
+  btn.textContent = "Sending…";
+  try {
+    const res = await fetch("https://formspree.io/f/mgobnajy", {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    });
+    if (res.ok) {
+      form.reset();
+      btn.textContent = "Request Sent!";
+      note.textContent = "We received your request and will be in touch within one business day.";
+    } else {
+      btn.disabled = false;
+      btn.textContent = "Request My Tour";
+      note.textContent = "Something went wrong — please try again or call us directly.";
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = "Request My Tour";
+    note.textContent = "Something went wrong — please try again or call us directly.";
+  }
 });
 
 /* ── Header, mobile menu, reveal ── */
