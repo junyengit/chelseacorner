@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chelsea Corners Apartments — Renovated 1-Bedrooms at 756 S. Carondelet St, Los Angeles</title>
+<meta name="description" content="Renovated one-bedroom apartments from $1,350/mo at 756 S. Carondelet St, Los Angeles. One month free with a signed 12-month lease. Tour today and apply online via Zillow.">
+
+<!-- Social/ad share preview -->
+<meta property="og:title" content="Chelsea Corners Apartments — Now Leasing in Los Angeles">
+<meta property="og:description" content="Renovated one-bedroom residences near Wilshire &amp; Koreatown. Tour today, apply online, e-sign your lease.">
+<meta property="og:image" content="photos/202/living.jpg">
+<meta property="og:type" content="website">
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  EVERYTHING YOU EDIT LIVES IN ONE PLACE — the CONFIG block in the
+  <script> at the bottom of this file:
+    • phone & email
+    • applyUrl  →  paste your online application / e-sign link
+                   (Zillow Applications, TurboTenant, DocuSign, etc.)
+    • each unit's rent, availability, and photos
+  ═══════════════════════════════════════════════════════════════
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="photos/202/living.jpg">
+
+<style>
+  :root{
+    --ivory:      #faf7f2;
+    --ivory-deep: #f3eee5;
+    --charcoal:   #23211e;
+    --ink:        #3a372f;
+    --brass:      #a8854b;
+    --brass-soft: #c4a772;
+    --line:       #e4dccc;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Jost', 'Helvetica Neue', sans-serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--sans); font-weight:300;
+    background:var(--ivory); color:var(--ink);
+    line-height:1.7; letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:var(--serif); font-weight:500; color:var(--charcoal); }
+  .wrap{ max-width:1160px; margin:0 auto; padding:0 32px; }
+  img{ display:block; }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:14px;
+    font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--brass); font-weight:400;
+  }
+  .eyebrow::before{ content:""; width:36px; height:1px; background:var(--brass-soft); }
+
+  /* ── Header ─────────────────────────────── */
+  header{ position:fixed; top:0; left:0; right:0; z-index:50; transition:background .4s, box-shadow .4s; }
+  /* no backdrop-filter here: it would become the containing block for the
+     fixed-position mobile menu and break its off-screen positioning */
+  header.scrolled{ background:rgba(250,247,242,.98); box-shadow:0 1px 0 var(--line); }
+  header.scrolled .brand, header.scrolled nav a{ color:var(--ink); }
+  header.scrolled .brand span{ color:var(--brass); }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:24px 0; transition:padding .4s; }
+  header.scrolled .nav{ padding:14px 0; }
+  .brand{ font-family:var(--serif); font-size:22px; letter-spacing:.06em; color:#fff; text-decoration:none; transition:color .4s; }
+  .brand span{ color:var(--brass-soft); font-style:italic; }
+  nav ul{ display:flex; gap:34px; list-style:none; align-items:center; }
+  nav a{
+    font-size:12.5px; letter-spacing:.22em; text-transform:uppercase;
+    color:#f0ece2; text-decoration:none; font-weight:400;
+    padding-bottom:4px; border-bottom:1px solid transparent; transition:all .3s;
+  }
+  nav a:hover{ color:var(--brass-soft); border-color:var(--brass-soft); }
+  .nav-cta{ border:1px solid var(--brass-soft); padding:10px 22px !important; color:#fff !important; }
+  header.scrolled .nav-cta{ color:var(--charcoal) !important; border-color:var(--charcoal); }
+  .nav-cta:hover{ background:var(--brass); border-color:var(--brass) !important; color:#fff !important; }
+  .menu-btn{ display:none; background:none; border:none; cursor:pointer; font-size:24px; color:#fff; z-index:60; }
+  header.scrolled .menu-btn{ color:var(--charcoal); }
+
+  /* ── Hero ───────────────────────────────── */
+  .hero{
+    min-height:96vh; display:flex; align-items:center;
+    position:relative; color:#fff; padding:140px 0 120px;
+    background:
+      linear-gradient(rgba(24,21,16,.62), rgba(24,21,16,.38) 45%, rgba(24,21,16,.66)),
+      url("photos/202/living.jpg") center 60%/cover no-repeat;
+  }
+  .hero-inner{ max-width:760px; }
+  .hero .eyebrow{ color:var(--brass-soft); }
+  .hero .eyebrow::before{ background:var(--brass-soft); }
+  .hero h1{ font-size:clamp(44px,6.4vw,80px); line-height:1.06; color:#fff; margin-top:24px; }
+  .hero h1 em{ font-style:italic; color:var(--brass-soft); }
+  .hero p.lede{ max-width:560px; margin-top:26px; font-size:17.5px; color:#e8e2d4; }
+  .hero-addr{ margin-top:14px; font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:#cfc8b8; }
+  .hero-actions{ margin-top:42px; display:flex; gap:16px; flex-wrap:wrap; }
+  .promo-pill{
+    display:inline-flex; align-items:center; gap:10px; margin-top:26px;
+    border:1px solid var(--brass-soft); background:rgba(168,133,75,.22);
+    color:#f3e9d4; padding:11px 22px;
+    font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  }
+  .promo-pill[hidden]{ display:none; }
+  .btn{
+    display:inline-block; text-decoration:none; font-size:12.5px;
+    letter-spacing:.24em; text-transform:uppercase; font-weight:400;
+    padding:17px 38px; transition:all .35s ease; cursor:pointer; text-align:center;
+  }
+  .btn-brass{ background:var(--brass); color:#fff; border:1px solid var(--brass); }
+  .btn-brass:hover{ background:#8f6f3c; border-color:#8f6f3c; }
+  .btn-light{ border:1px solid rgba(255,255,255,.7); color:#fff; background:rgba(255,255,255,.06); }
+  .btn-light:hover{ background:#fff; color:var(--charcoal); }
+  .btn-dark{ background:var(--charcoal); color:var(--ivory); border:1px solid var(--charcoal); }
+  .btn-dark:hover{ background:transparent; color:var(--charcoal); }
+  .btn-ghost{ border:1px solid var(--brass-soft); color:var(--charcoal); background:transparent; }
+  .btn-ghost:hover{ background:var(--brass); border-color:var(--brass); color:#fff; }
+
+  /* ── Quick facts strip ──────────────────── */
+  .facts{ background:var(--charcoal); color:#cfc8b8; padding:22px 0; }
+  .facts .wrap{ display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+  .fact{ font-size:12.5px; letter-spacing:.2em; text-transform:uppercase; display:flex; align-items:center; gap:10px; }
+  .fact b{ color:var(--brass-soft); font-weight:400; }
+
+  /* ── Sections ───────────────────────────── */
+  section{ padding:104px 0; }
+  .sec-head{ max-width:640px; margin-bottom:56px; }
+  .sec-head h2{ font-size:clamp(34px,4vw,48px); line-height:1.15; margin-top:18px; }
+  .sec-head p{ margin-top:16px; color:#6b6557; }
+  .sec-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .sec-head.center .eyebrow{ justify-content:center; }
+  .sec-head.center .eyebrow::after{ content:""; width:36px; height:1px; background:var(--brass-soft); }
+
+  /* ── Unit cards ─────────────────────────── */
+  .units{ background:var(--ivory-deep); }
+  .unit-grid{ display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+  .unit-card{
+    background:#fff; border:1px solid var(--line);
+    box-shadow:0 24px 50px -38px rgba(35,33,30,.35);
+    display:flex; flex-direction:column;
+  }
+  .unit-photo{ position:relative; aspect-ratio:4/3; overflow:hidden; cursor:zoom-in; }
+  .unit-photo img{ width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+  .unit-photo:hover img{ transform:scale(1.03); }
+  .unit-photo .tag{
+    position:absolute; top:16px; left:16px;
+    background:rgba(35,33,30,.82); color:var(--brass-soft);
+    font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+    padding:7px 14px;
+  }
+  .unit-photo .room{
+    position:absolute; bottom:14px; right:16px;
+    color:#fff; font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+    text-shadow:0 1px 6px rgba(0,0,0,.6);
+  }
+  .thumbs{ display:flex; gap:6px; padding:6px; background:#fff; }
+  .thumbs button{
+    flex:1; aspect-ratio:4/3; border:none; padding:0; cursor:pointer;
+    overflow:hidden; opacity:.55; transition:opacity .3s; background:none;
+  }
+  .thumbs button img{ width:100%; height:100%; object-fit:cover; }
+  .thumbs button.active, .thumbs button:hover{ opacity:1; }
+  .unit-body{ padding:28px 30px 30px; display:flex; flex-direction:column; flex:1; }
+  .unit-top{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; }
+  .unit-name{ font-family:var(--serif); font-size:30px; color:var(--charcoal); }
+  .unit-rent{ font-family:var(--serif); font-size:24px; color:var(--brass); white-space:nowrap; }
+  .unit-rent small{ font-size:13px; font-family:var(--sans); color:#9a937f; letter-spacing:.08em; }
+  .unit-specs{
+    display:flex; gap:22px; margin:14px 0 20px; padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+    font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:#9a937f;
+  }
+  .unit-actions{ margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .unit-actions .btn{ padding:14px 10px; font-size:11.5px; }
+
+  /* ── Lease steps ────────────────────────── */
+  .steps-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line); }
+  .step{ border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:46px 40px; }
+  .step .n{ font-family:var(--serif); font-size:54px; color:var(--brass-soft); line-height:1; font-style:italic; }
+  .step h3{ font-size:23px; margin:18px 0 10px; }
+  .step p{ font-size:14.5px; color:#6b6557; }
+  .steps-cta{ text-align:center; margin-top:48px; }
+  .steps-cta .note{ display:block; margin-top:14px; font-size:13px; color:#9a937f; font-style:italic; }
+
+  /* ── Neighborhood ───────────────────────── */
+  .hood{ background:var(--charcoal); color:#cfc8b8; }
+  .hood .sec-head h2{ color:var(--ivory); }
+  .hood .sec-head p{ color:#a39c8b; }
+  .hood-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:40px; }
+  .hood-item{ border-top:1px solid rgba(196,167,114,.35); padding-top:24px; }
+  .hood-item .mins{ font-family:var(--serif); font-size:34px; color:var(--brass-soft); line-height:1; }
+  .hood-item h3{ font-size:18px; margin:14px 0 8px; font-family:var(--sans); font-weight:400; letter-spacing:.04em; color:var(--ivory); }
+  .hood-item p{ font-size:14px; color:#a39c8b; }
+
+  /* ── Apply checklist ────────────────────── */
+  .check-grid{ display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+  .check-grid .photo-stack{ position:relative; }
+  .check-grid .photo-stack img{ width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .check-list{ list-style:none; margin-top:28px; }
+  .check-list li{
+    display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--line);
+    font-size:15.5px; color:var(--ink); align-items:baseline;
+  }
+  .check-list li::before{ content:"✓"; color:var(--brass); font-size:15px; }
+
+  /* ── Contact ────────────────────────────── */
+  .contact{ background:var(--ivory-deep); }
+  .contact-grid{ display:grid; grid-template-columns:1fr 1.1fr; gap:80px; }
+  .contact-info p{ color:#6b6557; margin-bottom:32px; }
+  .contact-line{ margin-bottom:24px; }
+  .contact-line .lbl{ font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#9a937f; margin-bottom:5px; }
+  .contact-line .val{ font-family:var(--serif); font-size:22px; color:var(--charcoal); }
+  .contact-line a{ color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--brass-soft); }
+  .contact-line a:hover{ color:var(--brass); }
+  form{ display:grid; gap:20px; }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  label{ display:block; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#9a937f; margin-bottom:7px; }
+  input, textarea, select{
+    width:100%; background:transparent; border:none;
+    border-bottom:1px solid #cdc3ab; padding:10px 2px;
+    font-family:var(--sans); font-size:15.5px; font-weight:300; color:var(--charcoal);
+    transition:border-color .3s; border-radius:0;
+  }
+  select{ appearance:none; background-image:linear-gradient(45deg,transparent 50%,var(--brass) 50%),linear-gradient(135deg,var(--brass) 50%,transparent 50%); background-position:calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size:5px 5px; background-repeat:no-repeat; }
+  input:focus, textarea:focus, select:focus{ outline:none; border-color:var(--brass); }
+  textarea{ resize:vertical; min-height:84px; }
+  form .btn{ justify-self:start; font-family:var(--sans); border:1px solid var(--charcoal); }
+  .form-note{ font-size:13px; color:#9a937f; font-style:italic; }
+
+  /* ── Footer ─────────────────────────────── */
+  footer{ background:var(--charcoal); color:#a39c8b; padding:54px 0 110px; text-align:center; }
+  footer .brand{ color:var(--ivory); font-size:24px; }
+  footer .fleur{ color:var(--brass-soft); font-size:18px; margin:16px 0; letter-spacing:.5em; }
+  footer p{ font-size:13px; letter-spacing:.08em; }
+
+  /* ── Sticky mobile CTA bar ──────────────── */
+  .sticky-cta{
+    position:fixed; bottom:0; left:0; right:0; z-index:55;
+    display:none; grid-template-columns:1fr 1fr;
+    background:rgba(35,33,30,.97); backdrop-filter:blur(6px);
+    padding:12px 14px; gap:10px;
+    box-shadow:0 -8px 30px rgba(0,0,0,.25);
+  }
+  .sticky-cta .btn{ padding:14px 8px; font-size:11.5px; }
+
+  /* ── Lightbox ───────────────────────────── */
+  .lightbox{
+    position:fixed; inset:0; z-index:100; background:rgba(20,18,14,.94);
+    display:none; align-items:center; justify-content:center;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width:92vw; max-height:86vh; object-fit:contain; box-shadow:0 30px 80px rgba(0,0,0,.5); }
+  .lb-btn{
+    position:absolute; top:50%; transform:translateY(-50%);
+    background:none; border:none; color:#e8e2d4; font-size:42px; cursor:pointer;
+    padding:20px; font-family:var(--serif); line-height:1;
+  }
+  .lb-btn:hover{ color:var(--brass-soft); }
+  .lb-prev{ left:8px; } .lb-next{ right:8px; }
+  .lb-close{ position:absolute; top:14px; right:22px; font-size:34px; transform:none; }
+  .lb-cap{
+    position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
+    color:#cfc8b8; font-size:12.5px; letter-spacing:.24em; text-transform:uppercase;
+  }
+
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .9s ease, transform .9s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+
+  /* ── Responsive ─────────────────────────── */
+  @media (max-width:980px){
+    .unit-grid{ grid-template-columns:1fr; }
+    .check-grid, .contact-grid{ grid-template-columns:1fr; gap:48px; }
+    .steps-grid{ grid-template-columns:1fr; }
+    .hood-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:900px){
+    nav ul{
+      position:fixed; inset:0; background:var(--charcoal);
+      flex-direction:column; justify-content:center; gap:32px;
+      transform:translateY(-100%); visibility:hidden;
+      transition:transform .45s ease, visibility 0s .45s;
+    }
+    nav ul.open{ transform:none; visibility:visible; transition:transform .45s ease; }
+    nav a{ font-size:15px; color:#f0ece2 !important; }
+    header.scrolled nav ul a{ color:#f0ece2 !important; }
+    .menu-btn{ display:block; }
+    .sticky-cta{ display:grid; }
+    section{ padding:76px 0; }
+    .facts .wrap{ justify-content:center; }
+  }
+  @media (max-width:560px){
+    .hood-grid, .form-row, .unit-actions{ grid-template-columns:1fr; }
+    .hero-actions .btn{ width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Chelsea <span>Corners</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <nav>
+      <ul id="navList">
+        <li><a href="#units">Available Units</a></li>
+        <li><a href="#lease">How Leasing Works</a></li>
+        <li><a href="#neighborhood">Neighborhood</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="nav-cta apply-link">Apply Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">Now Leasing · Los Angeles</span>
+      <h1>Your new home is<br><em>move-in ready</em></h1>
+      <p class="lede">Beautifully renovated one-bedroom residences with chef-ready kitchens, serene bedrooms, and spa-style baths — minutes from Wilshire, Koreatown, and Downtown.</p>
+      <div class="hero-addr">756 S. Carondelet St · Los Angeles, CA 90057</div>
+      <div class="hero-actions">
+        <a class="btn btn-brass apply-link" href="#">Apply Online</a>
+        <a class="btn btn-light" href="#units">View Available Units</a>
+      </div>
+      <div class="promo-pill" id="promoPill" hidden>✦ <span id="promoText"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ QUICK FACTS ═══════════ -->
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><b>✦</b> Renovated Interiors</div>
+    <div class="fact"><b>✦</b> <span id="unitCount">6</span> Units Available</div>
+    <div class="fact"><b>✦</b> From <span id="minRent">$1,350</span>/mo</div>
+    <div class="fact"><b>✦</b> Apply Online via Zillow</div>
+  </div>
+</div>
+
+<!-- ═══════════ AVAILABLE UNITS ═══════════ -->
+<section class="units" id="units">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Available Residences</span>
+      <h2>Choose Your Corner</h2>
+      <p>Every residence has been thoughtfully renovated — warm wood cabinetry, granite counters, stainless appliances, and sunlit rooms. Tap any photo to view it full screen.</p>
+    </div>
+    <div class="unit-grid" id="unitGrid"><!-- cards rendered from CONFIG --></div>
+  </div>
+</section>
+
+<!-- ═══════════ LEASE STEPS ═══════════ -->
+<section id="lease">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How Leasing Works</span>
+      <h2>From tour to keys in three easy steps</h2>
+    </div>
+    <div class="steps-grid reveal">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Tour Your Unit</h3>
+        <p>Book a private showing in person or by video — available seven days a week, on your schedule.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Apply on Zillow</h3>
+        <p>Apply securely through our Zillow listing in about ten minutes — one application covers every unit here. You'll hear back within one business day.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>E-Sign &amp; Move In</h3>
+        <p>Sign your lease electronically from any device — no printing, no fax, no office visit. Then pick up your keys.</p>
+      </div>
+    </div>
+    <div class="steps-cta reveal">
+      <a class="btn btn-dark apply-link" href="#">Start Your Application</a>
+      <span class="note">No obligation — touring first is always welcome.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ WHAT YOU'LL NEED ═══════════ -->
+<section class="apply-check" id="checklist">
+  <div class="wrap">
+    <div class="check-grid">
+      <div class="reveal">
+        <span class="eyebrow">Be Ready to Apply</span>
+        <h2 style="font-size:clamp(32px,3.6vw,44px); margin-top:18px; line-height:1.15;">Have these on hand and you can finish in one sitting</h2>
+        <ul class="check-list">
+          <li>Government-issued photo ID</li>
+          <li>Proof of income (recent pay stubs or offer letter)</li>
+          <li>Contact info for current or previous landlord</li>
+          <li>Security deposit equals one month's rent</li>
+          <li>A few minutes to e-sign — that's it</li>
+        </ul>
+      </div>
+      <div class="photo-stack reveal">
+        <img src="photos/204/living-2.jpg" alt="Bright living and dining room at Chelsea Corners" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ NEIGHBORHOOD ═══════════ -->
+<section class="hood" id="neighborhood">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The Neighborhood</span>
+      <h2>Westlake charm, citywide reach</h2>
+      <p>Tucked between Wilshire Boulevard and Koreatown — one of LA's most connected corners.</p>
+    </div>
+    <div class="hood-grid reveal">
+      <div class="hood-item">
+        <div class="mins">5<small style="font-size:16px;"> min</small></div>
+        <h3>Metro B &amp; D Lines</h3>
+        <p>Walk to Westlake/MacArthur Park Station for fast rides across the city.</p>
+      </div>
+      <div class="hood-item">
+        <div class="mins">5<small style="font-size:16px;"> min</small></div>
+        <h3>Koreatown Dining</h3>
+        <p>Some of LA's best restaurants, cafés, and nightlife minutes from your door.</p>
+      </div>
+      <div class="hood-item">
+        <div class="mins">10<small style="font-size:16px;"> min</small></div>
+        <h3>Downtown LA</h3>
+        <p>A quick commute to DTLA's offices, arts district, and entertainment.</p>
+      </div>
+      <div class="hood-item">
+        <div class="mins">2<small style="font-size:16px;"> min</small></div>
+        <h3>Wilshire Corridor</h3>
+        <p>Groceries, banks, gyms, and everyday essentials right around the corner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Schedule a Tour</span>
+        <h2 style="font-size:clamp(32px,3.8vw,44px); margin:18px 0 20px; line-height:1.15;">See it in person —<br>you'll want to stay</h2>
+        <p>Private tours seven days a week. Send us a note and we'll confirm a time within one business day.</p>
+        <div class="contact-line">
+          <div class="lbl">Telephone</div>
+          <div class="val"><a id="phoneLink" href="#">(555) 555-1234</a></div>
+        </div>
+        <div class="contact-line">
+          <div class="lbl">Email</div>
+          <div class="val"><a id="emailLink" href="#">leasing@chelseacorners.com</a></div>
+        </div>
+        <div class="contact-line">
+          <div class="lbl">Address</div>
+          <div class="val">756 S. Carondelet St, Los Angeles, CA 90057</div>
+        </div>
+      </div>
+      <form id="tourForm" class="reveal">
+        <div class="form-row">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" type="text" required>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel">
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" required>
+          </div>
+          <div>
+            <label for="unit">Unit of Interest</label>
+            <select id="unit"><option value="Any">Any available unit</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="movein">Desired Move-In</label>
+            <input id="movein" type="date">
+          </div>
+          <div>
+            <label for="tourtype">Tour Preference</label>
+            <select id="tourtype">
+              <option>In-person tour</option>
+              <option>Video tour</option>
+              <option>Just have questions</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="msg">Message <span style="text-transform:none; letter-spacing:0;">(optional)</span></label>
+          <textarea id="msg" placeholder="Mornings work best for me…"></textarea>
+        </div>
+        <button class="btn btn-dark" type="submit">Request My Tour</button>
+        <p class="form-note" id="formNote">This opens a pre-written email in your mail app — just press send.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="brand">Chelsea <span style="color:var(--brass-soft); font-style:italic;">Corners</span></div>
+    <div class="fleur">❦</div>
+    <p>756 S. Carondelet St, Los Angeles, CA 90057 &nbsp;·&nbsp; <span id="footPhone">(555) 555-1234</span></p>
+    <p style="margin-top:14px; color:#6e6757;">© 2026 Chelsea Corners Apartments. Equal Housing Opportunity.</p>
+  </div>
+</footer>
+
+<!-- ═══════════ STICKY MOBILE CTA ═══════════ -->
+<div class="sticky-cta">
+  <a class="btn btn-light" id="stickyCall" href="#">Call Now</a>
+  <a class="btn btn-brass apply-link" href="#">Apply Now</a>
+</div>
+
+<!-- ═══════════ LIGHTBOX ═══════════ -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-btn lb-close" aria-label="Close">×</button>
+  <button class="lb-btn lb-prev" aria-label="Previous">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" aria-label="Next">›</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   EDIT EVERYTHING HERE
+   • applyUrl: paste your online application / e-sign link
+     (Zillow Rental Applications, TurboTenant, Avail, DocuSign…).
+     Leave "" and Apply buttons will direct people to the tour form.
+   • rent: a number like 1795 shows "$1,795/mo"; null shows "Inquire".
+   • Remove a unit from this list when it's leased.
+   ═══════════════════════════════════════════════════════════════ */
+const CONFIG = {
+  phone: "800.525.6989",
+  email: "leasing@chelseacorners.com",           // ← replace with your real leasing inbox
+  applyUrl: "https://www.zillow.com/apartments/los-angeles-ca/chelsea-apartments/5ZpvkV/",
+  promo: "Limited offer — one month free with a signed 12-month lease",
+  /* rent: listings show $1,350–$1,450; adjust any unit priced above the base */
+  units: [
+    { num:"105", beds:1, baths:1, available:"Available Now", rent:1395,
+      photos:[["living","Living Room"],["kitchen","Kitchen"],["bedroom","Bedroom"],["bathroom","Bathroom"]] },
+    { num:"108", beds:1, baths:1, available:"Available Now", rent:1350,
+      photos:[["living-1","Living Room"],["living-2","Living Room"],["kitchen","Kitchen"],["bedroom-1","Bedroom"],["bedroom-2","Bedroom"],["bathroom","Bathroom"]] },
+    { num:"202", beds:1, baths:1, available:"Available Now", rent:1350,
+      photos:[["living","Living & Dining"],["kitchen","Kitchen"],["bedroom-1","Bedroom"],["bedroom-2","Bedroom"],["bathroom","Bathroom"]] },
+    { num:"204", beds:1, baths:1, available:"Available Now", rent:1350,
+      photos:[["living-1","Living Room"],["living-2","Living & Dining"],["kitchen-1","Kitchen"],["kitchen-2","Kitchen"],["bedroom-1","Bedroom"],["bedroom-2","Bedroom"],["bathroom","Bathroom"]] },
+    { num:"207", beds:1, baths:1, available:"Available Now", rent:1350,
+      photos:[["living-1","Living Room"],["living-2","Living Room"],["living-3","Entry & Living"],["kitchen","Kitchen"],["bedroom","Bedroom"],["bathroom","Bathroom"]] },
+    { num:"305", beds:1, baths:1, available:"Available Now", rent:1350,
+      photos:[["living-1","Living & Dining"],["living-2","Living Room"],["kitchen","Kitchen"],["bedroom","Bedroom"],["bathroom","Bathroom"]] },
+  ]
+};
+
+/* ── Wire phone / email everywhere ── */
+const tel = "tel:+1" + CONFIG.phone.replace(/\D/g,"");
+document.getElementById("phoneLink").href = tel;
+document.getElementById("phoneLink").textContent = CONFIG.phone;
+document.getElementById("stickyCall").href = tel;
+document.getElementById("footPhone").textContent = CONFIG.phone;
+const emailLink = document.getElementById("emailLink");
+emailLink.href = "mailto:" + CONFIG.email;
+emailLink.textContent = CONFIG.email;
+
+/* ── Promo banner + dynamic counts ── */
+if (CONFIG.promo){
+  document.getElementById("promoText").textContent = CONFIG.promo;
+  document.getElementById("promoPill").hidden = false;
+}
+document.getElementById("unitCount").textContent = CONFIG.units.length;
+const rents = CONFIG.units.map(u=>u.rent).filter(Boolean);
+if (rents.length) document.getElementById("minRent").textContent = "$" + Math.min(...rents).toLocaleString();
+
+/* ── Apply buttons ── */
+document.querySelectorAll(".apply-link").forEach(a => {
+  if (CONFIG.applyUrl){ a.href = CONFIG.applyUrl; a.target = "_blank"; a.rel = "noopener"; }
+  else { a.href = "#contact"; }
+});
+
+/* ── Render unit cards ── */
+const grid = document.getElementById("unitGrid");
+const unitSelect = document.getElementById("unit");
+const fmtRent = r => r ? "$" + r.toLocaleString() + " <small>/ mo</small>" : "Inquire <small>for rate</small>";
+
+CONFIG.units.forEach((u, ui) => {
+  const card = document.createElement("article");
+  card.className = "unit-card reveal";
+  const photoPath = (p) => `photos/${u.num}/${p}.jpg`;
+  card.innerHTML = `
+    <div class="unit-photo" data-unit="${ui}" data-idx="0">
+      <img src="${photoPath(u.photos[0][0])}" alt="Unit ${u.num} — ${u.photos[0][1]}" loading="lazy">
+      <span class="tag">${u.available}</span>
+      <span class="room">${u.photos[0][1]}</span>
+    </div>
+    <div class="thumbs">
+      ${u.photos.map((p,i)=>`
+        <button class="${i===0?'active':''}" data-unit="${ui}" data-idx="${i}" aria-label="${p[1]}">
+          <img src="${photoPath(p[0])}" alt="" loading="lazy">
+        </button>`).join("")}
+    </div>
+    <div class="unit-body">
+      <div class="unit-top">
+        <div class="unit-name">Unit ${u.num}</div>
+        <div class="unit-rent">${fmtRent(u.rent)}</div>
+      </div>
+      <div class="unit-specs">
+        <span>${u.beds} Bed</span><span>${u.baths} Bath</span><span>Renovated</span>
+      </div>
+      <div class="unit-actions">
+        <a class="btn btn-dark apply-unit" data-unit-num="${u.num}" href="#">Apply</a>
+        <a class="btn btn-ghost tour-unit" data-unit-num="${u.num}" href="#contact">Schedule Tour</a>
+      </div>
+    </div>`;
+  grid.appendChild(card);
+
+  const opt = document.createElement("option");
+  opt.textContent = "Unit " + u.num;
+  unitSelect.appendChild(opt);
+});
+
+/* Thumbnail swapping */
+grid.addEventListener("click", e => {
+  const btn = e.target.closest(".thumbs button");
+  if (btn){
+    const ui = +btn.dataset.unit, idx = +btn.dataset.idx;
+    const u = CONFIG.units[ui];
+    const card = btn.closest(".unit-card");
+    const photoBox = card.querySelector(".unit-photo");
+    photoBox.dataset.idx = idx;
+    photoBox.querySelector("img").src = `photos/${u.num}/${u.photos[idx][0]}.jpg`;
+    photoBox.querySelector(".room").textContent = u.photos[idx][1];
+    card.querySelectorAll(".thumbs button").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    return;
+  }
+  /* Apply / Tour per unit */
+  const apply = e.target.closest(".apply-unit");
+  const tour  = e.target.closest(".tour-unit");
+  if (apply || tour){
+    const num = (apply||tour).dataset.unitNum;
+    [...unitSelect.options].forEach(o => o.selected = o.textContent === "Unit " + num);
+    if (apply && CONFIG.applyUrl){
+      e.preventDefault();
+      window.open(CONFIG.applyUrl, "_blank");
+    } else if (apply){
+      apply.setAttribute("href", "#contact");
+    }
+  }
+  /* Lightbox on main photo */
+  const photo = e.target.closest(".unit-photo");
+  if (photo) openLightbox(+photo.dataset.unit, +photo.dataset.idx);
+});
+
+/* ── Lightbox ── */
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+const lbCap = document.getElementById("lbCap");
+let lbUnit = 0, lbIdx = 0;
+function showLb(){
+  const u = CONFIG.units[lbUnit], p = u.photos[lbIdx];
+  lbImg.src = `photos/${u.num}/${p[0]}.jpg`;
+  lbCap.textContent = `Unit ${u.num} — ${p[1]} (${lbIdx+1}/${u.photos.length})`;
+}
+function openLightbox(ui, idx){ lbUnit = ui; lbIdx = idx; showLb(); lb.classList.add("open"); }
+lb.querySelector(".lb-close").onclick = () => lb.classList.remove("open");
+lb.querySelector(".lb-prev").onclick = () => { const n = CONFIG.units[lbUnit].photos.length; lbIdx = (lbIdx-1+n)%n; showLb(); };
+lb.querySelector(".lb-next").onclick = () => { const n = CONFIG.units[lbUnit].photos.length; lbIdx = (lbIdx+1)%n; showLb(); };
+lb.addEventListener("click", e => { if (e.target === lb) lb.classList.remove("open"); });
+addEventListener("keydown", e => {
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape") lb.classList.remove("open");
+  if (e.key === "ArrowLeft") lb.querySelector(".lb-prev").click();
+  if (e.key === "ArrowRight") lb.querySelector(".lb-next").click();
+});
+
+/* ── Tour form → pre-written email ── */
+document.getElementById("tourForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value;
+  const subject = `Tour Request — ${v("unit")} at Chelsea Corners`;
+  const body =
+`Hello,
+
+I'd like to schedule a tour at Chelsea Corners Apartments (756 S. Carondelet St).
+
+Name: ${v("name")}
+Phone: ${v("phone") || "—"}
+Email: ${v("email")}
+Unit of interest: ${v("unit")}
+Desired move-in: ${v("movein") || "Flexible"}
+Tour preference: ${v("tourtype")}
+
+${v("msg")}
+
+Thank you!`;
+  location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  document.getElementById("formNote").textContent = "Your email draft is ready — press send in your mail app and we'll be in touch within one business day.";
+});
+
+/* ── Header, mobile menu, reveal ── */
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 40), {passive:true});
+const navList = document.getElementById("navList");
+document.getElementById("menuBtn").addEventListener("click", () => navList.classList.toggle("open"));
+navList.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navList.classList.remove("open")));
+const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold:.1});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
