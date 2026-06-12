@@ -418,8 +418,8 @@
       </div>
       <div class="step">
         <div class="n">2</div>
-        <h3>Apply on Zillow</h3>
-        <p>Apply securely through our Zillow listing in about ten minutes — one application covers every unit here. You'll hear back within one business day.</p>
+        <h3>Call to Apply</h3>
+        <p>Give us a call at <a class="apply-link" style="color:var(--brass);text-decoration:none;font-weight:400;">800.525.6989</a> to start your application over the phone. You'll hear back within one business day.</p>
       </div>
       <div class="step">
         <div class="n">3</div>
@@ -593,7 +593,7 @@
 const CONFIG = {
   phone: "800.525.6989",
   email: "rvrleasing@gmail.com",
-  applyUrl: "https://www.zillow.com/apartments/los-angeles-ca/chelsea-apartments/5ZpvkV/",
+  applyUrl: "",
   promo: "<strong>Limited offer Move in Special ( Upon approved credit)</strong>",
   /* rent: listings show $1,350–$1,450; adjust any unit priced above the base */
   units: [
@@ -635,10 +635,9 @@ if (unitCountEl) unitCountEl.textContent = CONFIG.units.length;
 const rents = CONFIG.units.map(u=>u.rent).filter(Boolean);
 if (rents.length) document.getElementById("minRent").textContent = "$" + Math.min(...rents).toLocaleString();
 
-/* ── Apply buttons ── */
+/* ── Apply buttons → dial phone ── */
 document.querySelectorAll(".apply-link").forEach(a => {
-  if (CONFIG.applyUrl){ a.href = CONFIG.applyUrl; a.target = "_blank"; a.rel = "noopener"; }
-  else { a.href = "#contact"; }
+  a.href = tel;
 });
 
 /* ── Render unit cards ── */
@@ -703,11 +702,8 @@ grid.addEventListener("click", e => {
   if (apply || tour){
     const num = (apply||tour).dataset.unitNum;
     [...unitSelect.options].forEach(o => o.selected = o.textContent === "Unit " + num);
-    if (apply && CONFIG.applyUrl){
-      e.preventDefault();
-      window.open(CONFIG.applyUrl, "_blank");
-    } else if (apply){
-      apply.setAttribute("href", "#contact");
+    if (apply){
+      apply.setAttribute("href", tel);
     }
   }
   /* Lightbox on main photo */
