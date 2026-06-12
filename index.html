@@ -338,7 +338,6 @@
 <div class="facts">
   <div class="wrap">
     <div class="fact"><b>✦</b> Renovated Interiors</div>
-    <div class="fact"><b>✦</b> <span id="unitCount">6</span> Units Available</div>
     <div class="fact"><b>✦</b> From <span id="minRent">$1,350</span>/mo</div>
     <div class="fact"><b>✦</b> Apply Online via Zillow</div>
   </div>
@@ -547,7 +546,7 @@ const CONFIG = {
   phone: "800.525.6989",
   email: "rvrleasing@gmail.com",
   applyUrl: "https://www.zillow.com/apartments/los-angeles-ca/chelsea-apartments/5ZpvkV/",
-  promo: "Limited offer — one month free with a signed 12-month lease",
+  promo: "<strong>Limited offer Move in Special ( Upon approved credit)</strong>",
   /* rent: listings show $1,350–$1,450; adjust any unit priced above the base */
   units: [
     { num:"105", beds:1, baths:1, available:"Available Now", rent:1395,
@@ -579,7 +578,7 @@ emailLink.textContent = CONFIG.email;
 
 /* ── Promo banner + dynamic counts ── */
 if (CONFIG.promo){
-  document.getElementById("promoText").textContent = CONFIG.promo;
+  document.getElementById("promoText").innerHTML = CONFIG.promo;
   document.getElementById("promoPill").hidden = false;
 }
 document.getElementById("unitCount").textContent = CONFIG.units.length;
