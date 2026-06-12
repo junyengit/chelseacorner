@@ -120,6 +120,23 @@
   .btn-ghost{ border:1px solid var(--brass-soft); color:var(--charcoal); background:transparent; }
   .btn-ghost:hover{ background:var(--brass); border-color:var(--brass); color:#fff; }
 
+  /* ── Disclosures ────────────────────────── */
+  .disclosures{ background:var(--charcoal); }
+  .disclosures .sec-head h2{ color:#fff; }
+  .disclosures .eyebrow{ color:var(--brass-soft); }
+  .disclosures .eyebrow::before{ background:var(--brass-soft); }
+  .disc-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .disc-card{
+    background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+    padding:32px 28px; text-align:center;
+  }
+  .disc-icon{ font-size:28px; margin-bottom:16px; }
+  .disc-card h3{ font-family:var(--serif); font-size:20px; color:#fff; margin-bottom:12px; }
+  .disc-card p{ font-size:14px; color:#b0a898; line-height:1.7; }
+  .disc-card strong{ color:var(--brass-soft); font-weight:400; }
+  @media(max-width:860px){ .disc-grid{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:540px){ .disc-grid{ grid-template-columns:1fr; } }
+
   /* ── Quick facts strip ──────────────────── */
   .facts{ background:var(--charcoal); color:#cfc8b8; padding:22px 0; }
   .facts .wrap{ display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; }
@@ -351,6 +368,38 @@
       <p>Every residence has been thoughtfully renovated — warm wood cabinetry, granite counters, stainless appliances, and sunlit rooms. Tap any photo to view it full screen.</p>
     </div>
     <div class="unit-grid" id="unitGrid"><!-- cards rendered from CONFIG --></div>
+  </div>
+</section>
+
+<!-- ═══════════ WHAT'S NOT INCLUDED ═══════════ -->
+<section class="disclosures">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to Know</span>
+      <h2>What's Not Included</h2>
+    </div>
+    <div class="disc-grid reveal">
+      <div class="disc-card">
+        <div class="disc-icon">🛋</div>
+        <h3>Unfurnished Units</h3>
+        <p>All units are delivered unfurnished. Any furniture shown in listing photos is used for staging purposes only and will not be present at move-in.</p>
+      </div>
+      <div class="disc-card">
+        <div class="disc-icon">⚡</div>
+        <h3>Utilities</h3>
+        <p>Tenants are responsible for setting up their own electricity account through <strong>LADWP</strong> and arranging internet service with a provider of their choice.</p>
+      </div>
+      <div class="disc-card">
+        <div class="disc-icon">🏢</div>
+        <h3>Building Services Fee</h3>
+        <p>A monthly building services fee is billed separately through <strong>Yes Energy</strong>. This covers shared building operating costs and will be outlined in your lease.</p>
+      </div>
+      <div class="disc-card">
+        <div class="disc-icon">💳</div>
+        <h3>Online Rent Payment</h3>
+        <p>Rent is paid online through <strong>RentCafe</strong> — convenient, secure, and available 24/7 from any device.</p>
+      </div>
+    </div>
   </div>
 </section>
 
