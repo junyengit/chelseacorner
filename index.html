@@ -338,7 +338,7 @@
 <div class="facts">
   <div class="wrap">
     <div class="fact"><b>✦</b> From <span id="minRent">$1,350</span>/mo</div>
-    <div class="fact"><b>✦</b> Apply Online via Zillow</div>
+    <div class="fact"><b>✦</b> Call to Apply: <a id="factsPhone" href="#" style="color:var(--brass-soft);text-decoration:none;">800.525.6989</a></div>
   </div>
 </div>
 
@@ -568,6 +568,7 @@ const tel = "tel:+1" + CONFIG.phone.replace(/\D/g,"");
 document.getElementById("phoneLink").href = tel;
 document.getElementById("phoneLink").textContent = CONFIG.phone;
 document.getElementById("stickyCall").href = tel;
+document.getElementById("factsPhone").href = tel;
 const footPhone = document.getElementById("footPhone");
 footPhone.textContent = CONFIG.phone;
 footPhone.href = tel;
