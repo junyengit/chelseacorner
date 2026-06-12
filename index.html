@@ -630,7 +630,8 @@ if (CONFIG.promo){
   document.getElementById("promoText").innerHTML = CONFIG.promo;
   document.getElementById("promoPill").hidden = false;
 }
-document.getElementById("unitCount").textContent = CONFIG.units.length;
+const unitCountEl = document.getElementById("unitCount");
+if (unitCountEl) unitCountEl.textContent = CONFIG.units.length;
 const rents = CONFIG.units.map(u=>u.rent).filter(Boolean);
 if (rents.length) document.getElementById("minRent").textContent = "$" + Math.min(...rents).toLocaleString();
 
